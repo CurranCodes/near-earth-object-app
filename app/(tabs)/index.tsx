@@ -1,4 +1,5 @@
 import { StyledButton } from "@/components/StyledButton";
+import { DatePicker } from "@/components/DatePicker";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function index(){
@@ -10,6 +11,7 @@ export default function index(){
         alignItems: "center",
       }}
     >
+      <DatePicker></DatePicker>
       <StyledButton 
         text="Lookup NEOs"
         fontSize={30}>
