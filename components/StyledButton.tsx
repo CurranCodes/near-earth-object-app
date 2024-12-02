@@ -1,12 +1,9 @@
-import { Link } from 'expo-router';
-import { openBrowserAsync } from 'expo-web-browser';
-import { type ComponentProps } from 'react';
-import { Platform, Pressable, Text, Props } from 'react-native';
+import {Pressable, Text} from 'react-native';
 import * as Haptics from 'expo-haptics';
-import { StyleProps } from 'react-native-reanimated';
 
-export function BigButton({text}) {
-  return (
+
+export function StyledButton({text = "This is a button!", fontSize = 50, onPressOut = () => {return}}) {
+    return (
     <Pressable
         style={({pressed}) => [
             {backgroundColor: pressed ? "#133e85" : "#2c70de",
@@ -21,12 +18,15 @@ export function BigButton({text}) {
         onPress={ 
           () => {Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Rigid)}
         }
+        onPressOut={
+          onPressOut
+        }
       >
          <Text
           style={{
             color: "white",
-            fontSize: 50,
-            fontFamily: "Poppins-100Thin"
+            fontSize: fontSize,
+            fontFamily: "Poppins-ExtraBold"
           }}
          >{text}</Text>
       </Pressable>

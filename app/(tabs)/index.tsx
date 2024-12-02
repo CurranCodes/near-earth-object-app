@@ -1,15 +1,7 @@
-import { Button, Pressable, Text, View } from "react-native";
-import { BigButton } from "@/components/BigButton";
+import { StyledButton } from "@/components/StyledButton";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { Poppins_100Thin, Poppins_400Regular, useFonts } from "@expo-google-fonts/poppins";
-import * as Haptics from 'expo-haptics';
 
-export default function Index() {
-  const [fontsLoaded] = useFonts({
-     Poppins_400Regular,
-     Poppins_100Thin
-  });
-
+export default function index(){
   return (
     <SafeAreaView
       style={{
@@ -18,9 +10,11 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <BigButton text="Im a big button">
+      <StyledButton 
+        text="Lookup NEOs"
+        fontSize={30}>
 
-      </BigButton>
+      </StyledButton>
     </SafeAreaView>
   );
 }
