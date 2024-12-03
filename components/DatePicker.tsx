@@ -5,14 +5,14 @@ import { View } from 'react-native';
 
 export function DatePicker (){
     return (
-      <View>
-            <DateTimePicker
-            value= {new Date()}
-            mode="date"
-            style={{
-              backgroundColor: "black",
-            }}
-            />
-      </View>
+      <DateTimePicker
+        value= {new Date()}
+        mode="date"
+        themeVariant='dark'
+        display='spinner'
+        style={{
+          flex: 1
+        }}
+      />
     );
   };

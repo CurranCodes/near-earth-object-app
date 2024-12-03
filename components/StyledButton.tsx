@@ -26,7 +26,7 @@ export function StyledButton({text = "This is a button!", fontSize = 50, onPress
           style={{
             color: "white",
             fontSize: fontSize,
-            fontFamily: "Poppins-ExtraBold"
+            fontFamily: "Poppins-Bold",
           }}
          >{text}</Text>
       </Pressable>
