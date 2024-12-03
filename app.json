@@ -34,12 +34,7 @@
           "backgroundColor": "#ffffff"
         }
       ],
-      [
-        "expo-font",
-        {
-          "fonts": ["./assets/fonts/poppins"]
-        }
-      ]
+      "expo-font"
     ],
     "experiments": {
       "typedRoutes": true
