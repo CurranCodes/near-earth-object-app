@@ -61,7 +61,21 @@ export default function index(){
           () => {Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Rigid)}
         }
         onPressOut={() => {
-          router.push("/list")
+          //structures date string to match required formatting of API
+          var year = date.getFullYear().toString();
+          while (year.length < 4) year = "0" + year;
+
+          var month = date.getMonth().toString();
+          while (month.length < 2 ) month = "0" + month;
+
+          var day = date.getDate().toString();
+          while (day.length < 2) day = "0" + day;
+
+          var endDay = date.getDate()
+
+          var dateString = year + "-" + month + "-" + day;
+          console.log(dateString);
+          router.push({pathname: "/list", params: { id: 26, selectedDate: dateString}});
         }}
       >
          <Text
