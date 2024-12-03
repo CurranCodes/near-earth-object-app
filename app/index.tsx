@@ -74,7 +74,6 @@ export default function index(){
           var endDay = date.getDate()
 
           var dateString = year + "-" + month + "-" + day;
-          console.log(dateString);
           router.push({pathname: "/list", params: { id: 26, selectedDate: dateString}});
         }}
       >
