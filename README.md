@@ -24,19 +24,19 @@ This project can be run locally via an iOS or Android simulator.
 
 ## AI Disclosure
 
-1. AI Usage: 
+1. AI Usage:\n
       No AI was used in the making of this application.
 
-2. Manual Work:
+2. Manual Work:\n
       All work was done manually on this project, to maintain quality.
 
-3. Evaluating AI Suggestions: 
+3. Evaluating AI Suggestions:\n
       Not applicable.
 
-4. Modifications:
+4. Modifications:\n
       Not applicable.
    
-5. AI in Your Workflow:
+5. AI in Your Workflow:\n
       I rarely use AI when working on projects for a client. The few times I have used AI it has been for rough drafts with quick turnarounds, and occasional documentation questions. No AI was used to assist me in this project
 
 
