@@ -2,13 +2,11 @@ import DateTimePicker from '@react-native-community/datetimepicker';
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Text, Pressable } from "react-native";
 import * as Haptics from 'expo-haptics';
-import { useNavigation } from 'expo-router';
 import { SetStateAction, useState } from "react";
 import { router } from 'expo-router';
 
 export default function index(){
   const [date, setDate] = useState(new Date())
-  const navigation = useNavigation();
 
   const onChangeFunc = (event: any, selectedDate: SetStateAction<Date>) => {
      setDate(selectedDate);
@@ -19,7 +17,8 @@ export default function index(){
         flex: 1,
         backgroundColor: "black",
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
+        paddingBottom: 40
       }}
     >
       <SafeAreaView
@@ -27,13 +26,22 @@ export default function index(){
           justifyContent: "center",
           alignItems: "center"
         }}>
-        <Text
+        <Text 
           style={{
             color: "white",
             fontFamily: "Poppins",
             fontSize: 30,
           }}>
-            Select A Date Below!
+            Select A Date
+        </Text>
+        <Text
+          style={{
+            color: "white",
+            fontFamily: "Poppins",
+            fontSize: 15,
+            marginTop: 20,
+          }}>
+            Lookup Asteroids That Almost Hit The Earth
         </Text>
       </SafeAreaView>
       <DateTimePicker
@@ -49,7 +57,7 @@ export default function index(){
       <Pressable
         style={({pressed}) => [
             {backgroundColor: pressed ? "#133e85" : "#2c70de",
-            alignContent: "center",
+            alignContent: "start",
             padding: 20,
             borderRadius: 20,
             alignItems: "center"}
@@ -71,8 +79,6 @@ export default function index(){
           var day = date.getDate().toString();
           while (day.length < 2) day = "0" + day;
 
-          var endDay = date.getDate()
-
           var dateString = year + "-" + month + "-" + day;
           router.push({pathname: "/list", params: { id: 26, selectedDate: dateString}});
         }}
@@ -81,7 +87,7 @@ export default function index(){
           style={{
             color: "white",
             fontSize: 30,
-            fontFamily: "Poppins-Bold",
+            fontFamily: "Poppins",
           }}
          >Lookup NEOs</Text>
       </Pressable>

@@ -38,7 +38,6 @@ export default function list() {
           neoEntry.miss_distance = Math.round(Number(closeApproachData.miss_distance.miles)) + " mi";
           neoEntry.hazardous = asteroidData.is_potentially_hazardous_asteroid;
           neoEntry.id = asteroidData.id;
-          console.log(neoEntry);
           neoList.push(neoEntry);
         }
       }
@@ -59,7 +58,7 @@ export default function list() {
         style={{
           flex: 1,
           backgroundColor: "black",
-          justifyContent: "center",
+          justifyContent: "left",
           marginTop: StatusBar.currentHeight || 0,
         }}
       >
@@ -70,57 +69,49 @@ export default function list() {
             data={data}
             renderItem={({item}) => (
               <View style={{
-                backgroundColor: '#6d8196',
+                backgroundColor: '#323940',
                 padding: 20,
                 justifyContent: "flex-start",
-                alignItems: "center",
-                margin: 10,
+                alignItems: "start",
+                margin: 20,
+                marginBottom: 10,
                 borderRadius: 5,
               }}>
-                <Text
-                style={{
-                  flex:1,
-                  color: "white",
-                  fontSize: 20,
-                  marginTop: 0,
-                  textAlign: 'center'
+                <View style={{
+                  flexDirection: "row"
                 }}>
-                  ASTEROID {item.name}
-                </Text>
-                <View
-                style={{
-                  flex: 2,
-                  flexDirection: "row",
-                  justifyContent: "space-around",
-                  alignContent: "center"
-                }}>
-                  <Text style={styles.dataItem}>
-                    Miss Distance
-                    {"\n"}
-                    {item.miss_distance} 
-                  </Text>
-                  <Text style={styles.dataItem}>
-                    Relative Velocity 
-                    {"\n"}
-                    {item.relative_velocity} 
-                  </Text>
+                  <Text style={{
+                    flex: 2,
+                    color: "white",
+                    fontSize: 20,
+                    margin: 5,
+                    fontWeight: "bold",
+                  }}>
+                    {item.name}</Text>
+                  <Text style={{
+                    color: item.hazardous ?"black" : "white",
+                    fontSize: 12,
+                    margin: 5,
+                    paddingBottom: 0,
+                    marginBottom: 0,
+                    textAlign: 'center',
+                    alignContent: 'center',
+                    fontWeight: "light",
+                    padding: 8,
+                    backgroundColor: item.hazardous ? "#eda125" : "#2c70de",
+                    borderRadius: 5
+                    }}>
+                    {item.hazardous ? "HAZARD" : "SAFE"}</Text>
                 </View>
-                <View
-                style={{
-                  flex: 2,
-                  flexDirection: "row",
-                  justifyContent: "space-around",
-                  alignContent: "center"
-                }}>
                   <Text style={styles.dataItem}>
-                    Diameter
-                    {"\n"}
-                    {item.diameter} 
+                    Miss Distance: {item.miss_distance} 
                   </Text>
                   <Text style={styles.dataItem}>
-                    {item.hazardous ? "Hazardous" : "Not Hazardous"}
+                    Relative Velocity: {item.relative_velocity} 
+                  </Text>             
+                  <Text style={styles.dataItem}>
+                    Diameter: {item.diameter} 
                   </Text>
-                </View>
               </View>
             )}
             />
@@ -133,14 +124,8 @@ export default function list() {
 const styles = StyleSheet.create({
   dataItem: {
     flex: 1,
-    color: "#36404a",
+    color: "white",
     fontSize: 20,
-    backgroundColor: "#adcced",
-    borderColor: "#36404a",
-    borderWidth: 1,
-    borderRadius: 5,
-    textAlign: "center",
-    alignContent: "center",
     margin: 5
   }
 });
