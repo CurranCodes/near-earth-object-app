@@ -37,6 +37,6 @@ This project can be run locally via an iOS or Android simulator.
       Not applicable.
    
 5. AI in Your Workflow:\
-      I rarely use AI when working on projects for a client. The few times I have used AI it has been for rough drafts with quick turnarounds, and occasional documentation questions. No AI was used to assist me in this project
+      I rarely use AI when working on projects for a client. The few times I have used AI it has been for rough drafts with quick turnarounds, and occasional documentation questions. No AI was used to assist me in this project.
 
 
