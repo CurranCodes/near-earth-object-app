@@ -3,7 +3,6 @@ import axios from 'axios';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { useLocalSearchParams } from "expo-router";
 import { ActivityIndicator, FlatList, StatusBar, Text, StyleSheet, View } from 'react-native';
-import { Poppins_700Bold } from '@expo-google-fonts/poppins';
 
 const API_URL = 'https://api.nasa.gov/neo/rest/v1/feed?';
 
@@ -45,7 +44,6 @@ export default function list() {
     } catch (error) {
       console.error('Error fetching data:', error);
     }finally {
-      console.log(data);
       setLoading(false);
     }
   };
@@ -58,7 +56,6 @@ export default function list() {
         style={{
           flex: 1,
           backgroundColor: "black",
-          justifyContent: "left",
           marginTop: StatusBar.currentHeight || 0,
         }}
       >
@@ -72,7 +69,6 @@ export default function list() {
                 backgroundColor: '#323940',
                 padding: 20,
                 justifyContent: "flex-start",
-                alignItems: "start",
                 margin: 20,
                 marginBottom: 10,
                 borderRadius: 5,
