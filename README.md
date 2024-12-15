@@ -4,7 +4,7 @@ This project was created as part of the interview process for a position at Red 
 
 If you have any questions or concerns regarding this project please email me at currancodes@gmail.com
 
-This project can be run locally via an iOS or Android simulator.
+This project is designed to be run locally on iPhone or via an iOS simulator.
 
 ## To run
 
