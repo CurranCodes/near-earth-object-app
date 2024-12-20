@@ -21,7 +21,7 @@ This project is designed to be run locally on iPhone or via an iOS simulator.
    ```bash
     npx expo start
    ```
-4. If you want to use your own iOS device, register it with the following url:
+4. If you want to use your own iOS device, register it with the following URL:
 
     https://expo.dev/register-device/76c1d36a-13fd-4a54-a321-b96311fdbffe
 
